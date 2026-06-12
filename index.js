@@ -29,7 +29,7 @@ function playRound(humanChoice, computerChoice) {
     computerChoice = getComputerChoice();
     console.log(`You chose ${humanChoice}, computer chose ${computerChoice}.`);
     if (humanChoice === computerChoice) {
-        return "It's a tie!";
+        console.log ("It's a tie!");
     }
     else if (
         (humanChoice === "rock" && computerChoice === "scissors") ||
