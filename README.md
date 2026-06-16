@@ -1,58 +1,56 @@
 
 # Rock Paper Scissors
 
-Third project from The Odin Project Foundations course. Built a Rock Paper Scissors game played entirely via the browser console using JavaScript.
+Third project from The Odin Project Foundations course. Originally built to be played via the browser console, now fully refactored into a dynamic web page with an interactive User Interface (UI).
 
 ## What I Learned
 
-This project was my first real JavaScript logic challenge. I worked with:
+This project was my first real JavaScript logic and DOM manipulation challenge. Through this iterative development, I worked with:
 
-* `Math.random()` and `Math.floor()` for random computer choice
-* Functions — declarations, parameters, return values
-* `if/else` conditionals for game logic
-* Template literals for dynamic console messages
-* `for` loop for repeating 5 rounds
-* Score tracking with global variables
-* `prompt()` for user input
-* `.toLowerCase()` for case-insensitive input handling
-
-The logic part was manageable but structuring the functions correctly — especially understanding scope and when to call what — took real effort.
+* **DOM Manipulation**: Selecting HTML elements using `document.querySelector()` and dynamically updating content with `.textContent`.
+* **Event Listeners**: Handling user interactions by attaching `'click'` events to buttons using arrow functions.
+* **State Management**: Using global variables to track scores across multiple rounds without relying on loops.
+* **Control Flow & Refactoring**: Moving from synchronous `for` loops and blocking `prompt()` inputs to an asynchronous, event-driven architecture.
+* **Game Logic**: Applying `Math.random()`, conditional statements (`if/else`), and logical operators (`&&`, `||`) to evaluate game rules and automatically reset scores once a player reaches 5 points.
 
 ## How to Play
 
-* Open `index.html` in your browser
-* Open the browser console (F12)
-* Enter `rock`, `paper` or `scissors` when prompted
-* Play 5 rounds — best score wins!
+* Open `index.html` in your browser.
+* Click on the **Rock**, **Paper**, or **Scissors** buttons to make your move.
+* The results of each round and the live running score will update instantly on the screen.
+* The game goes on until one player reaches **5 points**. Once a winner is announced, the score resets automatically so you can start a new game instantly!
 
-## Pseudocode
+## Pseudocode (UI Version)
 
+```text
 START game
-  Set humanScore = 0, computerScore = 0
+  Initialize humanScore = 0, computerScore = 0
+  Listen for clicks on Rock, Paper, and Scissors buttons
   
-  REPEAT 5 times:
-    Get computer choice randomly
-    Get human choice via prompt
-    Compare choices:
+  WHEN a button is clicked:
+    Get humanChoice from the clicked button
+    Get computerChoice randomly via Math.random()
+    
+    COMPARE choices:
       IF equal → tie
       IF human wins → humanScore++
       IF computer wins → computerScore++
-    Print round result
-  
-  Print final scores
-  IF humanScore > computerScore → human wins
-  IF computerScore > humanScore → computer wins
-  ELSE → tie
+      
+    Update the UI display with the round result and current scores
+    
+    IF humanScore === 5:
+      Display "GAME OVER! You won the game!"
+      Reset humanScore = 0, computerScore = 0
+    ELSE IF computerScore === 5:
+      Display "GAME OVER! Computer wins the game!"
+      Reset humanScore = 0, computerScore = 0
 END game
+Technologies Used
+HTML / CSS
 
-## Technologies Used
+JavaScript
 
-* HTML5
-* JavaScript
-* Git
-* GitHub
-* Linux Terminal
+Git / GitHub
 
-## Live Preview
-
+Live Preview
 https://tarlan129.github.io/Rock-Paper-Scissors/
