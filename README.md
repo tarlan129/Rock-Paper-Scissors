@@ -22,7 +22,6 @@ This project was my first real JavaScript logic and DOM manipulation challenge. 
 
 ## Pseudocode (UI Version)
 
-```text
 START game
   Initialize humanScore = 0, computerScore = 0
   Listen for clicks on Rock, Paper, and Scissors buttons
@@ -45,12 +44,14 @@ START game
       Display "GAME OVER! Computer wins the game!"
       Reset humanScore = 0, computerScore = 0
 END game
-Technologies Used
+
+##Technologies Used
 HTML / CSS
 
 JavaScript
 
 Git / GitHub
 
-Live Preview
+##Live Preview
+
 https://tarlan129.github.io/Rock-Paper-Scissors/
